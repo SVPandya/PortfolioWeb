@@ -1,0 +1,87 @@
+html {
+    scroll-behavior: smooth;
+    font-family: "Roboto Flex"
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 60%;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    font-size: 110%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50px;
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+    transition:
+        width 0.4s ease,
+        border-radius 0.4s ease,
+        background-color 0.4s ease;
+}
+
+nav.nav-scrolled {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navbar {
+    color: #F5F5F5;
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+    margin: 6%;
+    font-weight: 300;
+    /* z-index: 1; */
+}
+
+/* On hover, change color and move up */
+.navbar:hover {
+    /* color: var(--clr-4); */
+    color: transparent;
+    background: linear-gradient(-45deg, #216c5e, var(--clr-4), #4db7a6, #6ff0db, #4db7a6, var(--clr-4), #216c5e);
+    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+    background-clip: text;
+    /* Clip the gradient to the text */
+    -webkit-background-clip: text;
+    /* For WebKit browsers (Chrome, Safari) */
+    background-size: 400% 400%;
+    animation: gradient 2s ease infinite;
+    transform: translateY(-2px);
+    /* Move up */
+    /* cursor: none; Uncomment this if you want the radial cursor back */
+}
+
+#about {
+    padding-top: 20px;
+    margin-top: -20px;
+}
+
+#projects {
+    padding-top: 20px;
+    margin-top: -20px;
+}
+
+
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
