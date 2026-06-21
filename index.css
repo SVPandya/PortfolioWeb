@@ -3,6 +3,10 @@ html {
     font-family: "Roboto Flex"
 }
 
+body {
+    background-color: rgb(0, 0, 0)
+}
+
 nav {
     display: flex;
     align-items: center;
@@ -21,6 +25,7 @@ nav {
         width 0.4s ease,
         border-radius 0.4s ease,
         background-color 0.4s ease;
+    margin-top: 0.7%;
 }
 
 nav.nav-scrolled {
@@ -44,10 +49,8 @@ nav.nav-scrolled {
 
 /* On hover, change color and move up */
 .navbar:hover {
-    /* color: var(--clr-4); */
     color: transparent;
     background: linear-gradient(-45deg, #216c5e, var(--clr-4), #4db7a6, #6ff0db, #4db7a6, var(--clr-4), #216c5e);
-    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
     background-clip: text;
     /* Clip the gradient to the text */
     -webkit-background-clip: text;
@@ -137,7 +140,6 @@ h1 {
 }
 
 #linkedin:hover {
-    /* cursor: none; Uncomment this if you want the radial cursor back */
     box-shadow: none;
     transform: translateY(-6px);
 }
@@ -149,7 +151,6 @@ h1 {
 }
 
 #githubLogo:hover {
-    /* cursor: none; Uncomment this if you want the radial cursor back */
     transform: translateY(-6px);
     box-shadow: none;
 }
@@ -165,6 +166,7 @@ h1 {
 }
 
 #myVideo {
+    /* change to absolute to just have it as the intro */
     position: absolute;
     top: 0;
     left: 0;
@@ -183,6 +185,7 @@ h1 {
 }
 
 .video-overlay {
+    /* change to absolute to just have it as the intro */
     position: absolute;
     top: 0;
     left: 0;
@@ -204,4 +207,102 @@ h1 {
     height: 15%;
     /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(7, 52, 56, 1)); */
     z-index: 2;
+}
+
+
+h2 {
+    text-align: center;
+    font-size: 230%;
+    color: white;
+}
+
+#googleAnsatz {
+    background-image: url(images/googleAnsatzImages/mainImage.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+
+}
+
+#ntfsFile {
+    background-image: url(images/NTFSFileImages/mainpage.png);
+    background-color: rgba(0, 0, 0, 0.6);
+
+}
+
+#soundscribe {
+    background-image: url(images/SoundScribeImages/third.png);
+    background-size: cover;
+    background-position: 50% 60%;
+    background-color: rgba(0, 0, 0, 0.6);
+
+}
+
+#teamup {
+    background-image: url(images/TeamUpImages/mainPic.png);
+    background-size: cover;
+    background-position: 50% 60%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#blankslate {
+    background-image: url(images/BlankSlateImages/MainPic.png);
+    background-size: cover;
+    background-position: top;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#ravage {
+    background-image: url(images/ravage.png);
+    background-size: 130%;
+    background-position: 50% 60%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.projDiv {
+    height: 15rem;
+    background-blend-mode: multiply;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.projDiv:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        0 0 6px var(--clr-4),
+        0 0 12px 4px var(--clr-4);
+}
+
+
+
+.projLink {
+    text-decoration: none;
+    color: #F5F5F5;
+}
+
+.tools {
+    display: inline-block;
+    background-color: var(--clr-6);
+    border-radius: 50px;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin: 3px;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: smaller;
+}
+
+#toolContainer {
+    display: block;
+    margin-bottom: 4%;
+}
+
+h3 {
+    margin-top: 3.5em;
 }

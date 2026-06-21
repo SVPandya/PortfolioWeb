@@ -16,7 +16,6 @@
 </head>
 
 <body>
-    <div id="nav-trigger"></div>
     <nav>
         <a href="index.html" class="navbar">Svar</a>
         <a href="#about" class="navbar">About</a>
@@ -24,10 +23,11 @@
         <a href="#projects" class="navbar">Projects</a>
         <a href="#techStack" class="navbar">Tech Stack</a>
     </nav>
+    <div id="nav-trigger"></div>
 
     <div class="video-section">
         <video autoplay muted playsinline loop id="myVideo">
-            <source src="images/porfolioBackground.mp4" type="video/mp4">
+            <source src="images/portfolioBackground.mp4" type="video/mp4">
         </video>
         <div class="video-overlay"></div>
         <div class="video-overlay-content">
@@ -45,8 +45,138 @@
             </h1>
         </div>
         <div class="transition"></div>
+        <div id="nav-trigger-end"></div>
     </div>
 
+
+
+
+
+    <!-- projects -->
+    <!-- add google project and jack memory segmentation visualizer (eocs2) -->
+    <h2 id="projects">Projects</h2>
+    <table id="projectTable">
+        <tr>
+            <td style="width: 33%;">
+                <div class="projects-grid">
+                    <a href="Projects/SoundScribe.html" class="projLink">
+                        <div id="googleAnsatz" class="projDiv">
+                            <h3>Automated Ansatz Generation Using Neural Networks for Fermi-Hubbard Simulation</h3>
+                            <div id="toolContainer">
+                                <p class="tools">VQE</p>
+                                <p class="tools">Qiskit-Python</p>
+                                <p class="tools">Quantum Machine Learning</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </td>
+            <td style="width: 33%;">
+                <div class="projects-grid">
+                    <a href="https://dpandaman.github.io/#projects" target="_blank" class="projLink">
+                        <div id="ravage" class="projDiv">
+                            <h3>RAVAGE: Quadruped Robot<br>(With Devanshu Pandya)</h3>
+                            <div id="toolContainer">
+                                <p class="tools">Tool 1</p>
+                                <p class="tools">Tool 2</p>
+                                <p class="tools">Tool 3</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </td>
+            <td style="width: 33%;">
+                <div class="projects-grid">
+                    <a href="Projects/SoundScribe.html" class="projLink">
+                        <div id="ntfsFile" class="projDiv">
+                            <h3>Resident and Non-Resident File Management in NTFS</h3>
+                            <div id="toolContainer">
+                                <p class="tools">Tool 1</p>
+                                <p class="tools">Tool 2</p>
+                                <p class="tools">Tool 3</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </td>
+
+        </tr>
+        <tr>
+            <td style="width: 33%;">
+                <a href="Projects/SoundScribe.html" class="projLink">
+                    <!-- <a href="Projects/SoundScribe.html" class="proj"> -->
+                    <div class="projDiv" id="soundscribe">
+                        <!-- <div class="proj"> -->
+                        <h3>SoundScribe</h3>
+                        <div id="toolContainer">
+                            <p class="tools">Python</p>
+                            <p class="tools">Pytorch</p>
+                            <p class="tools">Flask</p>
+                        </div>
+                        <!-- <img src="images/SoundScribeImages/third.png" alt="Image coming soon!" class="display-img"> -->
+                    </div>
+                </a>
+            </td>
+
+            <td style="width: 33%;">
+                <a href="Projects/TeamUp.html" class="projLink">
+                    <div class="projDiv" id="teamup">
+                        <h3>TeamUp</h3>
+                        <div id="toolContainer">
+                            <p class="tools">PHP</p>
+                            <p class="tools">MySQL</p>
+                            <p class="tools">Google API</p>
+                        </div>
+                        <!-- <img src="images/TeamUpImages/mainPic.png" alt="Home Page/Open Requests" class="display-img"> -->
+                    </div>
+                </a>
+            </td>
+            <td style="width: 33%;">
+                <a href="Projects/BlankSlate.html" class="projLink">
+                    <div class="projDiv" id="blankslate">
+                        <h3>BlankSlate</h3>
+                        <div id="toolContainer">
+                            <p class="tools">PHP</p>
+                            <p class="tools">MySQL</p>
+                            <p class="tools">Google Maps</p>
+                        </div>
+                    </div>
+                </a>
+            </td>
+
+        </tr>
+        <tr>
+            <td style="width: 33%;">
+                <a href="Projects/BlankSlate.html" class="projLink">
+                    <div class="projDiv" id="blankslate">
+                        <h3>VM Stack Visualizer</h3>
+                        <div id="toolContainer">
+                            <p class="tools">Tool 1</p>
+                            <p class="tools">Tool 2</p>
+                            <p class="tools">Tool 3</p>
+                        </div>
+                    </div>
+                </a>
+            </td>
+            <td style="width: 33%;">
+                <a href="Projects/BlankSlate.html" class="projLink">
+                    <div class="projDiv" id="blankslate">
+                        <h3>Verilog Flappy Bird</h3>
+                        <div id="toolContainer">
+                            <p class="tools">Verilog</p>
+                            <p class="tools">Tool 2</p>
+                            <p class="tools">Tool 3</p>
+                        </div>
+                    </div>
+                </a>
+            </td>
+        </tr>
+    </table>
+
+    <footer>
+        <p>© 2025 Svar Pandya. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
