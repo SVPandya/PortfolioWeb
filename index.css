@@ -14,7 +14,8 @@ html {
 }
 
 body {
-    background-color: rgb(0, 0, 0)
+    background-color: rgb(0, 0, 0);
+    color: white;
 }
 
 nav {
@@ -225,6 +226,11 @@ h2 {
     color: white;
 }
 
+table {
+    width: 95%;
+    margin: auto;
+}
+
 #googleAnsatz {
     background-image: url(images/googleAnsatzImages/mainImage.png);
     background-size: cover;
@@ -329,7 +335,7 @@ h3 {
     content: "";
     position: absolute;
     left: 50%;
-    top: 15%;
+    top: 10%;
     bottom: 15%;
     width: 3px;
     background: white;
@@ -337,11 +343,45 @@ h3 {
 }
 
 .pill-shape {
-    width: clamp(500px, 3vw, 30px);
-    height: clamp(60px, 20vh, 130px);
+    /* width: clamp(650px, 3vw, 30px); */
+    /* height: clamp(60px, 20vh, 180px); */
+    width: 650px;
+    min-height: 180px;
     background-color: white;
-    border-radius: 9999px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    /* padding-left: 25px 50px; */
+    box-sizing: border-box;
     /* margin-bottom: 5%; */
+}
+
+.experienceContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+}
+
+.experienceContent h4 {
+    margin: 5px 0 10px 0;
+    color: #9ca3af;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.experienceDate {
+    color: #d1d5db;
+    font-size: 0.85rem;
+    margin: 0 0 12px 0;
+}
+
+.experienceDescription {
+    color: #f5f5f5;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    max-width: 500px;
+    margin: 0 0 15px 0;
 }
 
 #cipCont,
@@ -352,7 +392,7 @@ h3 {
     animation: gradient 6s linear infinite;
     -webkit-animation: gradient 6s linear infinite;
     transition: all 0.2s ease;
-    border: 10px solid #175E54;
+    border: 6px solid #175E54;
 }
 
 #cipCont:hover,
@@ -370,7 +410,7 @@ h3 {
     animation: gradient 4s linear infinite;
     -webkit-animation: gradient 4s linear infinite;
     transition: all 0.2s ease;
-    border: 10px solid #FFCC00;
+    border: 6px solid #FFCC00;
 }
 
 #wiuCont:hover,
@@ -388,7 +428,7 @@ h3 {
     animation: gradient 5s linear infinite;
     -webkit-animation: gradient 5s linear infinite;
     transition: all 0.2s ease;
-    border: 10px solid #fcfaf9;
+    border: 6px solid #fcfaf9;
 }
 
 #absopCont:hover,
@@ -400,20 +440,23 @@ h3 {
 
 #googleCont,
 #googleLogoCont {
-    background: linear-gradient(-45deg, #245edb, #0e3ec1, #1D2E8F);
+    /* background: linear-gradient(-45deg, #4285F4, #1A73E8, #174EA6); */
+    background: #f5f5f5;
+    /* background: linear-gradient(-45deg, #245edb, #0e3ec1, #1D2E8F); */
     background-size: 400% 400%;
     -webkit-background-size: 400% 400%;
     animation: gradient 5s linear infinite;
     -webkit-animation: gradient 5s linear infinite;
     transition: all 0.2s ease;
-    border: 10px solid #f9ab00;
+    border: 6px solid #3b7dee;
+    /* border: 6px solid #f9ab00; */
 }
 
 #googleCont:hover,
 #googleLogoCont:hover {
     box-shadow:
-        0 0 6px #f9ab00,
-        0 0 12px 4px #f9ab00;
+        0 0 6px #3b7dee,
+        0 0 12px 4px #3b7dee;
 }
 
 .logoCont {
@@ -427,13 +470,14 @@ h3 {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    /* object-position: 80% 50%; */
 }
 
 .timeline-item {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 80px;
+    gap: 130px;
     margin: 10% 0;
     position: relative;
 }
@@ -444,4 +488,18 @@ h3 {
 
 .timeline-item.right {
     flex-direction: row-reverse;
+}
+
+#firstTimelineItem {
+    margin-top: 1.5%;
+}
+
+.experienceContent h3 {
+    margin: 0;
+    font-size: 1.35rem;
+    font-weight: 500;
+}
+
+h4 {
+    margin: 0px;
 }
