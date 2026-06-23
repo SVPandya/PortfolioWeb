@@ -12,6 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 
@@ -21,7 +22,8 @@
         <a href="#about" class="navbar">About</a>
         <a href="#experience" class="navbar">Experience</a>
         <a href="#projects" class="navbar">Projects</a>
-        <a href="#techStack" class="navbar">Tech Stack</a>
+        <a href="#techStack" class="navbar">Tools</a>
+        <a href="#contact" class="navbar">Contact</a>
     </nav>
     <div id="nav-trigger"></div>
 
@@ -49,10 +51,37 @@
     </div>
 
 
+    <!-- about me section -->
+    <h2 id="about">About Me</h2>
+    <hr>
+    <table>
+        <tr>
+            <td style="width: 53%; padding: 3%;">
+                <p>
+                    Hi, I'm Svar Pandya, a <strong>computer science</strong> student at the University of Illinois
+                    Urbana-Champaign.
+                    <br><br>I am extremely passionate about all things computer science and always eager to
+                    learn. From exploring machine learning to quantum computing, I love taking steps toward making a
+                    real-world impact.
+                    <br><br>Outside the classroom, you'll find me engaging in photography, working on side
+                    projects, or just soaking up the sun. I'm always open to exploring new opportunities, so let's
+                    connect and build something new, one idea at a time!
+                    <br><br>
+                    Email: spandya [at] imsa [dot] edu
+                </p>
+            </td>
+            <td style="width: 47%; padding: 3%;">
+                <div class="aboutMeCont">
+                    <img src="images/aboutMe.jpeg" alt="Image coming soon" id="aboutMe">
+                </div>
+            </td>
+        </tr>
+    </table>
 
 
     <!-- experience section -->
     <h2 id="experience">Experience</h2>
+    <hr>
     <div class="timeline">
 
         <div class="timeline-item left" id="firstTimelineItem">
@@ -63,7 +92,7 @@
                     <p class="experienceDate" style="color: #374151; background: rgba(0, 0, 0, 0.113);
     border: 1px solid rgba(0, 0, 0, 0.091);">June 2025 - May 2026</p>
                     <p class="experienceDescription" style="color: #1f2937">
-                        Proposed and conducted research on using neural netwroks to automate quantum circuit design to
+                        Proposed and conducted research on using neural networks to automate quantum circuit design to
                         estimate molecular ground-state energies
                     </p>
                 </div>
@@ -129,6 +158,7 @@
     <!-- projects -->
     <!-- add google project and jack memory segmentation visualizer (eocs2) -->
     <h2 id="projects">Projects</h2>
+    <hr>
     <table id="projectTable">
         <tr>
             <td style="width: 33%;">
@@ -136,6 +166,17 @@
                     <a href="Projects/SoundScribe.html" class="projLink">
                         <div id="googleAnsatz" class="projDiv">
                             <h3>Automated Ansatz Generation Using Neural Networks for Fermi-Hubbard Simulation</h3>
+                            <h4 style="display: inline-block;
+    color: #d1d5db;
+    font-size: 0.85rem;
+    margin: 0 0 12px 0;
+    padding: 0.25rem 0.75rem;
+    background: rgb(0, 0, 0);
+    border: 1px solid rgba(255, 255, 255, 0.197);
+    border-radius: 9999px;
+    white-space: nowrap;
+    line-height: 1;
+    align-self: flex-start;">Google Quantum AI</h4>
                             <div id="toolContainer">
                                 <p class="tools">VQE</p>
                                 <p class="tools">Qiskit-Python</p>
@@ -164,6 +205,17 @@
                     <a href="Projects/SoundScribe.html" class="projLink">
                         <div id="ntfsFile" class="projDiv">
                             <h3>Resident and Non-Resident File Management in NTFS</h3>
+                            <h4 style="display: inline-block;
+    color: #d1d5db;
+    font-size: 0.85rem;
+    margin: 0 0 12px 0;
+    padding: 0.25rem 0.75rem;
+    background: rgba(31, 31, 31, 0.501);
+    border: 1px solid rgba(74, 74, 74, 0.237);
+    border-radius: 9999px;
+    white-space: nowrap;
+    line-height: 1;
+    align-self: flex-start;">Western Illinois University</h4>
                             <div id="toolContainer">
                                 <p class="tools">Tool 1</p>
                                 <p class="tools">Tool 2</p>
