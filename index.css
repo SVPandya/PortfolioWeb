@@ -397,6 +397,7 @@ h3 {
 
 #cipCont:hover,
 #cipLogoCont:hover {
+    transform: translateY(-8px);
     box-shadow:
         0 0 6px #175E54,
         0 0 12px 4px #175E54;
@@ -415,6 +416,7 @@ h3 {
 
 #wiuCont:hover,
 #wiuLogoCont:hover {
+    transform: translateY(-8px);
     box-shadow:
         0 0 6px #FFCC00,
         0 0 12px 4px #FFCC00;
@@ -433,6 +435,7 @@ h3 {
 
 #absopCont:hover,
 #absopLogoCont:hover {
+    transform: translateY(-8px);
     box-shadow:
         0 0 6px #fcfaf9,
         0 0 12px 4px #fcfaf9;
@@ -454,6 +457,7 @@ h3 {
 
 #googleCont:hover,
 #googleLogoCont:hover {
+    transform: translateY(-8px);
     box-shadow:
         0 0 6px #3b7dee,
         0 0 12px 4px #3b7dee;
