@@ -25,7 +25,11 @@ nav {
     height: 30px;
     width: 60%;
     padding: 10px;
-    margin: auto;
+    /* keep nav fixed so class changes don't trigger layout reflow */
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
     font-size: 110%;
     background-color: rgba(0, 0, 0, 0.4);
@@ -33,20 +37,21 @@ nav {
     backdrop-filter: blur(6px);
     z-index: 1000;
     transition:
-        width 0.4s ease,
-        border-radius 0.4s ease,
-        background-color 0.4s ease;
-    margin-top: 0.7%;
+        width 0.35s ease,
+        border-radius 0.35s ease,
+        background-color 0.35s ease,
+        top 0.35s ease,
+        transform 0.35s ease;
 }
 
 nav.nav-scrolled {
-    position: fixed;
+    /* when scrolled, pin to top and expand to full width */
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
     border-radius: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.88);
 }
 
 .navbar {
@@ -205,7 +210,7 @@ h1 {
     /* width: calc(100vw - 15px); */
     height: calc(100vh);
     /* background: rgba(0, 0, 0, 0.7); */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1));
     z-index: -1;
 }
 
@@ -225,6 +230,20 @@ h2 {
     text-align: center;
     font-size: 230%;
     color: white;
+}
+
+/* Reveal animation for project table rows (matches timeline-item) */
+#projectTable tr {
+    opacity: 0;
+    transform: translateY(20px) scale(0.99);
+    transition: opacity 0.6s cubic-bezier(.2, .9, .2, 1) var(--delay, 0ms),
+        transform 0.6s cubic-bezier(.2, .9, .2, 1) var(--delay, 0ms);
+    will-change: opacity, transform;
+}
+
+#projectTable tr.in-view {
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }
 
 table {
@@ -493,6 +512,20 @@ h3 {
     gap: 130px;
     margin: 10% 0;
     position: relative;
+}
+
+/* Timeline reveal animation */
+.timeline-item {
+    opacity: 0;
+    transform: translateY(30px) scale(0.99);
+    transition: opacity 0.6s cubic-bezier(.2, .9, .2, 1) var(--delay, 0ms),
+        transform 0.6s cubic-bezier(.2, .9, .2, 1) var(--delay, 0ms);
+    will-change: opacity, transform;
+}
+
+.timeline-item.in-view {
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }
 
 .timeline-item.left {
