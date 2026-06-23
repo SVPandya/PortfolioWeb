@@ -585,3 +585,24 @@ h4 {
         0 0 6px #f2476c,
         0 0 12px 4px #f2476c;
 }
+
+#contact {
+    margin-top: 2%;
+    text-align: center;
+}
+
+.contactLinksCont {
+    margin: auto;
+    width: 40%;
+    text-align: center;
+}
+
+.contactLinksCont a {
+    color: #3b7dee;
+}
+
+footer {
+    margin-top: 2%;
+    text-align: center;
+    color: #909192;
+}
