@@ -67,7 +67,11 @@ nav.nav-scrolled {
 /* On hover, change color and move up */
 .navbar:hover {
     color: transparent;
-    background: linear-gradient(-45deg, #216c5e, var(--clr-4), #4db7a6, #6ff0db, #4db7a6, var(--clr-4), #216c5e);
+    /* background: linear-gradient(-45deg, #216c5e, var(--clr-4), #4db7a6, #6ff0db, #4db7a6, var(--clr-4), #216c5e); */
+    /* background: linear-gradient(-45deg, #1d4ed8, #3b82f6, #6366f1, #8b5cf6, #6366f1, #3b82f6, #1d4ed8); */
+    /* background: linear-gradient(-45deg, #4b5563, #9ca3af, #f3f4f6, #ffffff, #f3f4f6, #9ca3af, #4b5563); */
+    /* background: linear-gradient(-45deg, #005582, #0369a1, #0ea5e9, #38bdf8, #06b6d4, #38bdf8, #0ea5e9, #0369a1, #005582); */
+    background: linear-gradient(-45deg, #4a3b2c, #755f4a, #a38a70, #d5c6af, #a38a70, #755f4a, #4a3b2c);
     background-clip: text;
     /* Clip the gradient to the text */
     -webkit-background-clip: text;
@@ -79,11 +83,13 @@ nav.nav-scrolled {
 }
 
 #about {
+    scroll-margin-top: 55px;
     padding-top: 20px;
     margin-top: -20px;
 }
 
 #projects {
+    scroll-margin-top: 55px;
     padding-top: 20px;
     margin-top: -20px;
 }
@@ -260,7 +266,7 @@ hr {
 }
 
 table {
-    width: 95%;
+    width: 92.5%;
     margin: auto;
 }
 
@@ -286,6 +292,14 @@ table {
 
 }
 
+#strum {
+    background-image: url(images/strumLogo.png);
+    background-size: cover;
+    background-position: 50% 80%;
+    background-color: rgba(0, 0, 0, 0.6);
+
+}
+
 #teamup {
     background-image: url(images/TeamUpImages/mainPic.png);
     background-size: cover;
@@ -297,6 +311,13 @@ table {
     background-image: url(images/BlankSlateImages/MainPic.png);
     background-size: cover;
     background-position: top;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#nandbug {
+    background-image: url(images/VMStack.png);
+    background-size: cover;
+    background-position: 50% 100%;
     background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -319,9 +340,12 @@ table {
 
 .projDiv:hover {
     transform: translateY(-8px);
-    box-shadow:
+    /* box-shadow:
         0 0 6px var(--clr-4),
-        0 0 12px 4px var(--clr-4);
+        0 0 12px 4px var(--clr-4); */
+    box-shadow:
+        0 0 8px #755f4a,
+        0 0 16px 2px #bea993;
 }
 
 
@@ -387,6 +411,10 @@ h3 {
     /* padding-left: 25px 50px; */
     box-sizing: border-box;
     /* margin-bottom: 5%; */
+}
+
+#experience {
+    scroll-margin-top: 55px;
 }
 
 .experienceContent {
@@ -569,6 +597,9 @@ h4 {
     overflow: hidden;
     border-radius: 40px;
     transition: all 0.3s ease;
+    border: 6px solid #76604a;
+    /* border: 6px solid #f2476c */
+    filter: brightness(0.8);
 }
 
 #aboutMe {
@@ -582,13 +613,15 @@ h4 {
 .aboutMeCont:hover {
     transform: translateY(-8px);
     box-shadow:
-        0 0 6px #f2476c,
-        0 0 12px 4px #f2476c;
+        0 0 6px #76604a,
+        0 0 12px 4px #76604a;
+    filter: brightness(1);
 }
 
 #contact {
     margin-top: 2%;
     text-align: center;
+    scroll-margin-top: 55px;
 }
 
 .contactLinksCont {
@@ -605,4 +638,92 @@ footer {
     margin-top: 2%;
     text-align: center;
     color: #909192;
+}
+
+#rowOne {
+    height: 120px;
+    overflow: hidden;
+    width: 90%;
+    margin: auto;
+}
+
+#rowTwo {
+    height: 120px;
+    overflow: hidden;
+    width: 90%;
+    margin: auto;
+}
+
+#rowOne .marquee-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    height: 100%;
+    animation: leftRoll 12s linear infinite;
+}
+
+#rowTwo .marquee-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    height: 100%;
+    animation: rightRoll 12s linear infinite;
+}
+
+.row1 {
+    width: 150px;
+    /* height: 15px; */
+    margin: 30px 0px 0 0;
+    flex: 0 0 auto;
+}
+
+.row2 {
+    width: 150px;
+    /* height: 15px; */
+    margin: 30px 0px 0 0;
+    flex: 0 0 auto;
+}
+
+.row1 img {
+    width: 50%;
+}
+
+.row2 img {
+    width: 50%;
+}
+
+@keyframes leftRoll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes rightRoll {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#tools {
+    margin-top: 2.5%;
+    scroll-margin-top: 55px;
+}
+
+.toolImg {
+    transition: all 0.2s ease;
+    border-radius: 22px;
+}
+
+.toolImg:hover {
+    box-shadow:
+        0 0 8px #755f4a,
+        0 0 16px 2px #bea993;
 }
