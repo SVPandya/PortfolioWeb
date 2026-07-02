@@ -1,0 +1,105 @@
+:root {
+    --clr-1: #052b2f;
+    --clr-2: #073438;
+    --clr-3: #0e4b50;
+    --clr-4: #2d8f85;
+    --clr-5: #637c54;
+    --clr-6: #07383c;
+}
+
+
+
+
+
+
+h1 {
+    text-align: center;
+    /* margin-top: 4em; */
+    font-size: 400%;
+    /* height: calc(100vh - 50px - 11vh - 200px); */
+    /* background-color: blue; */
+    /* padding-top: 200px; */
+}
+
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin: auto;
+}
+
+
+html {
+    scroll-behavior: smooth;
+    font-family: "Roboto Flex"
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    /* background-color: rgb(0, 3, 15); */
+    color: white;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 60%;
+    padding: 10px;
+    /* keep nav fixed so class changes don't trigger layout reflow */
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 110%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50px;
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+    transition:
+        width 0.35s ease,
+        border-radius 0.35s ease,
+        background-color 0.35s ease,
+        top 0.35s ease,
+        transform 0.35s ease;
+}
+
+nav.nav-scrolled {
+    /* when scrolled, pin to top and expand to full width */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.88);
+}
+
+.navbar {
+    color: #F5F5F5;
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+    margin: 6%;
+    font-weight: 300;
+    /* z-index: 1; */
+}
+
+/* On hover, change color and move up */
+.navbar:hover {
+    color: transparent;
+    /* background: linear-gradient(-45deg, #216c5e, var(--clr-4), #4db7a6, #6ff0db, #4db7a6, var(--clr-4), #216c5e); */
+    /* background: linear-gradient(-45deg, #1d4ed8, #3b82f6, #6366f1, #8b5cf6, #6366f1, #3b82f6, #1d4ed8); */
+    /* background: linear-gradient(-45deg, #4b5563, #9ca3af, #f3f4f6, #ffffff, #f3f4f6, #9ca3af, #4b5563); */
+    /* background: linear-gradient(-45deg, #005582, #0369a1, #0ea5e9, #38bdf8, #06b6d4, #38bdf8, #0ea5e9, #0369a1, #005582); */
+    background: linear-gradient(-45deg, #4a3b2c, #755f4a, #a38a70, #d5c6af, #a38a70, #755f4a, #4a3b2c);
+    background-clip: text;
+    /* Clip the gradient to the text */
+    -webkit-background-clip: text;
+    /* For WebKit browsers (Chrome, Safari) */
+    background-size: 400% 400%;
+    animation: gradient 2s ease infinite;
+    transform: translateY(-2px);
+    /* Move up */
+}

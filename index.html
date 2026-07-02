@@ -17,6 +17,28 @@
 </head>
 
 <body>
+    <!-- popup card for each project -->
+    <div id="projectModal" class="modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <div class="slideshow">
+                    <button class="slide-btn" id="prevBtn"><i class="fa-solid fa-angle-left"></i></button>
+                    <!-- <button class="slide-btn" id="prevBtn">‹</button> -->
+
+                    <img id="modalImg" src="" alt="">
+
+                    <button class="slide-btn" id="nextBtn"><i class="fa-solid fa-angle-right"></i></button>
+                </div>
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+                <div id="modalTools"></div>
+                <a id="modalLink" href="#" target="_blank" class="modal-button">Learn More</a>
+            </div>
+        </div>
+    </div>
+
     <nav>
         <a href="index.html" class="navbar">Svar</a>
         <a href="#about" class="navbar">About</a>
@@ -28,7 +50,7 @@
     <div id="nav-trigger"></div>
 
     <div class="video-section">
-        <video autoplay muted playsinline loop id="myVideo">
+        <video autoplay muted playsin loop id="myVideo">
             <source src="images/portfolioBackground.mp4" type="video/mp4">
         </video>
         <div class="video-overlay"></div>
@@ -91,8 +113,8 @@
                     <p class="experienceDate" style="color: #374151; background: rgba(0, 0, 0, 0.113);
     border: 1px solid rgba(0, 0, 0, 0.091);">June 2025 - Present</p>
                     <p class="experienceDescription" style="color: #1f2937">
-                        Proposed and conducted research on using neural networks to automate quantum circuit design to
-                        estimate molecular ground-state energies
+                        Proposed and conducting research on using neural networks to automate quantum circuit design to
+                        estimate molecular ground-state energies with VQE.
                     </p>
                 </div>
             </div>
@@ -108,8 +130,8 @@
                     <h4>Abstract Operators</h4>
                     <p class="experienceDate">August 2024 - May 2025</p>
                     <p class="experienceDescription">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, exercitationem nemo numquam
-                        officia voluptas provident nesciunt animi incidunt velit.
+                        Integrated advanced machine learning models and AI agents to create a tool helping children with
+                        neurodegenerative diseases improve social skills through interactive activities.
                     </p>
                 </div>
             </div>
@@ -125,8 +147,8 @@
                     <h4>Western Illinois University</h4>
                     <p class="experienceDate">May 2024 - October 2024</p>
                     <p class="experienceDescription">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, exercitationem nemo numquam
-                        officia voluptas provident nesciunt animi incidunt velit.
+                        Conducted research on the NTFS Master File Table (MFT) to evaluate data recovery and justify
+                        differences in resident and non-resident file persistence after user actions on SSDs and HDDs.
                     </p>
                 </div>
             </div>
@@ -142,8 +164,8 @@
                     <h4>Stanford University</h4>
                     <p class="experienceDate">April 2024 - June 2025</p>
                     <p class="experienceDescription">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, exercitationem nemo numquam
-                        officia voluptas provident nesciunt animi incidunt velit.
+                        Taught Stanford's CS106A Python Programming Course live to a class of 15-20 students across the
+                        world.
                     </p>
                 </div>
             </div>
@@ -162,7 +184,7 @@
         <tr>
             <td style="width: 33%;">
                 <div class="projects-grid">
-                    <a href="Projects/SoundScribe.html" class="projLink">
+                    <div href="" class="projLink">
                         <div id="googleAnsatz" class="projDiv">
                             <h3 style="margin-top: 2em;">Automated Ansatz Generation Using Neural Networks for
                                 Fermi-Hubbard Simulation</h3>
@@ -183,7 +205,7 @@
                                 <p class="tools">Quantum Machine Learning</p>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </td>
             <td style="width: 33%;">
@@ -192,9 +214,9 @@
                         <div id="ravage" class="projDiv">
                             <h3>RAVAGE: Quadruped Robot<br>(With Devanshu Pandya)</h3>
                             <div id="toolContainer">
-                                <p class="tools">Tool 1</p>
-                                <p class="tools">Tool 2</p>
-                                <p class="tools">Tool 3</p>
+                                <p class="tools">C++</p>
+                                <p class="tools">Python</p>
+                                <p class="tools">Arduino</p>
                             </div>
                         </div>
                     </a>
@@ -217,9 +239,9 @@
     line-height: 1;
     align-self: flex-start;">Western Illinois University</h4>
                             <div id="toolContainer">
-                                <p class="tools">Tool 1</p>
-                                <p class="tools">Tool 2</p>
-                                <p class="tools">Tool 3</p>
+                                <p class="tools">Python</p>
+                                <p class="tools">FTK Imager</p>
+                                <p class="tools">Windows</p>
                             </div>
                         </div>
                     </a>
@@ -282,8 +304,8 @@
                         <h3>Nandbug</h3>
                         <div id="toolContainer">
                             <p class="tools">Python</p>
-                            <p class="tools">Tool 2</p>
-                            <p class="tools">Tool 3</p>
+                            <p class="tools">CLI</p>
+                            <p class="tools">Jack</p>
                         </div>
                     </div>
                 </a>
@@ -300,7 +322,7 @@
                     </div>
                 </a>
             </td>
-            <td style="width: 33%;">
+            <!-- <td style="width: 33%;">
                 <a href="Projects/flappyBird.html" class="projLink">
                     <div class="projDiv" id="blankslate">
                         <h3>Verilog Flappy Bird</h3>
@@ -311,7 +333,7 @@
                         </div>
                     </div>
                 </a>
-            </td>
+            </td> -->
         </tr>
     </table>
 
@@ -392,6 +414,7 @@
     <footer>
         <p>© 2026 Svar Pandya. All rights reserved.</p>
     </footer>
+    <script src="https://kit.fontawesome.com/24de17ad63.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 
