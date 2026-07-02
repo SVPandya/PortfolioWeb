@@ -104,13 +104,15 @@ const projectData = {
         images: ["images/googleAnsatzImages/mainImage.png"],
         title: 'Automated Ansatz Generation Using Neural Networks for Fermi-Hubbard Simulation',
         description: 'Proposed and conducted research on using neural networks to automate quantum circuit design to estimate molecular ground-state energies with VQE at Google Quantum AI.',
+        bullets: ['Built a machine learning pipeline to automate quantum circuit generation for Fermi-Hubbard molecular simulations.', 'Mapped molecule geometries from the QM7X dataset to sequences of quantum gates.', 'Estimated ground-state energy for small molecules within a 20% error margin.', 'Presented findings to a 15-person panel of Google software engineers and researchers.'],
         tools: ['VQE', 'Qiskit-Python', 'Quantum Machine Learning'],
         link: '#'
     },
     ntfsFile: {
-        images: ["images/NTFSFileImages/mainpage.png"],
+        images: ["images/NTFSFileImages/newMainpage.png"],
         title: 'Resident and Non-Resident File Management in NTFS',
         description: 'Conducted research on the NTFS Master File Table (MFT) to evaluate data recovery and justify differences in resident and non-resident file persistence after user actions on SSDs and HDDs.',
+        bullets: [],
         tools: ['Python', 'FTK Imager', 'Windows'],
         link: 'Projects/wiu.html'
     },
@@ -119,6 +121,7 @@ const projectData = {
         title: 'SoundScribe',
         // description: 'An intelligent audio-to-transcription application leveraging deep learning models to convert speech to text with high accuracy.',
         description: "Every beginner musician has had the dream to play the song stuck in their head for hours, but resources to find sheet music is limited. SoundScribe is a tool to help you decipher the notes to any audio file, whether it be a published song or just a tune you heard online.\n\nAfter wanting to play Bollywood songs on guitar for over 8 years, I realized tutorials to some of my favorite songs simply were not available. Many apps with guitar tabs didn't offer a wide enough variety, so I built SoundScribe. SoundScribe uses a custom neural network to clasisfy notes in small time intervals.<br><br>While it isn't the most accurate, many of SoundScribe's limitations come from a small dataset used for training, leading to small discrepencies between the frequency of notes played and notes given.",
+        bullets: [],
         tools: ['Python', 'PyTorch', 'Flask'],
         link: 'Projects/SoundScribe.html'
     },
@@ -126,6 +129,7 @@ const projectData = {
         images: ["images/strumLogo.png"],
         title: 'S.T.R.U.M. - Software-Translated Runtime Utility for Music',
         description: 'A comprehensive system that translates musical input through software to control hardware instruments in real-time.',
+        bullets: [],
         tools: ['C++', 'Java', 'Arduino'],
         link: 'Projects/strum.html'
     },
@@ -133,6 +137,7 @@ const projectData = {
         images: ["images/TeamUpImages/mainPic.png", "images/TeamUpImages/createForm.png", "images/TeamUpImages/email.png", "images/TeamUpImages/signUp.png"],
         title: 'TeamUp',
         description: 'A collaborative platform connecting team members and simplifying project coordination with integrated scheduling and communication tools.',
+        bullets: [],
         tools: ['PHP', 'MySQL', 'Google API'],
         link: 'Projects/TeamUp.html'
     },
@@ -140,6 +145,7 @@ const projectData = {
         images: ["images/BlankSlateImages/MainPic.png", "images/BlankSlateImages/second.png", "images/BlankSlateImages/third.png"],
         title: 'BlankSlate',
         description: 'An innovative web application designed to help users discover and plan activities in their local area.',
+        bullets: [],
         tools: ['PHP', 'MySQL', 'Google Maps'],
         link: 'Projects/BlankSlate.html'
     },
@@ -147,6 +153,7 @@ const projectData = {
         images: ["images/VMStack.png"],
         title: 'Nandbug',
         description: 'A debugging tool for the Jack virtual machine, providing comprehensive stack visualization and memory introspection capabilities.',
+        bullets: [],
         tools: ['Python', 'CLI', 'Jack'],
         link: 'Projects/vmStackVisualizer.html'
     },
@@ -154,6 +161,7 @@ const projectData = {
         images: ["images/ravage.png"],
         title: 'RAVAGE: Quadruped Robot',
         description: 'A four-legged robotic platform developed in collaboration with advanced locomotion and autonomous control systems.',
+        bullets: [],
         tools: ['C++', 'Python', 'Arduino'],
         link: 'https://dpandaman.github.io/#projects'
     }
@@ -175,6 +183,16 @@ function openModal(projectKey) {
     document.getElementById('modalTitle').textContent = data.title;
     document.getElementById('modalDescription').textContent = data.description;
     document.getElementById('modalLink').href = data.link;
+
+    const bulletsContainer = document.getElementById('modalBullets');
+    bulletsContainer.innerHTML = '';
+    const bullets = data.bullets || [];
+    bulletsContainer.style.display = bullets.length ? 'block' : 'none';
+    bullets.forEach(bullet => {
+        const item = document.createElement('li');
+        item.textContent = bullet;
+        bulletsContainer.appendChild(item);
+    });
 
     //show tools
     const toolsContainer = document.getElementById('modalTools');

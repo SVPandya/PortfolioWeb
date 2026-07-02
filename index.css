@@ -26,7 +26,7 @@ nav {
     height: 30px;
     width: 60%;
     padding: 10px;
-    /* keep nav fixed so class changes don't trigger layout reflow */
+    /* nav is fixed so it doesn't expand */
     position: fixed;
     top: 24px;
     left: 50%;
@@ -852,6 +852,23 @@ footer {
     color: #d1d5db;
     font-size: 0.95rem;
     line-height: 1.6;
+}
+
+.modal-bullets {
+    display: none;
+    margin: -4px 0 22px 0;
+    padding-left: 1.25rem;
+    color: #d1d5db;
+    font-size: 0.95rem;
+    line-height: 1.55;
+}
+
+.modal-bullets li {
+    margin-bottom: 8px;
+}
+
+.modal-bullets li::marker {
+    color: #bfa282;
 }
 
 #modalTools {
